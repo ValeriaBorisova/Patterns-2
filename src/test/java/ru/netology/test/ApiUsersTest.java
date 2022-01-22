@@ -73,7 +73,7 @@ public class ApiUsersTest {
     public void shouldLoginWithWrongPassword() {
         UserInfo user = DataGenerator.RegistrationInfo.generateUserInfo("ru", false);
         setUpUser(user);
-        loginForm(user.getLogin(), DataGenerator.RegistrationInfo.makeUserPassword("ru"));
+        loginForm(user.getLogin(), DataGeneratorRegistrationInfo.makeUserPassword("ru"));
         $(withText("Неверно указан логин или пароль")).waitUntil(visible, 15000);
     }
 }
